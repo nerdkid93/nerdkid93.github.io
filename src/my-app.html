@@ -105,6 +105,7 @@
             type: String,
             reflectToAttribute: true,
             observer: '_pageChanged',
+            value: 'view1',
           },
           rootPattern: String,
           routeData: Object,
@@ -112,35 +113,22 @@
         };
       }
 
-      static get observers() {
-        return [
-          '_routePageChanged(routeData.page)',
-        ];
+      static get observers() { return [
+        '_routePageChanged(routeData.page)', ];
       }
 
       constructor() {
         super();
 
-        // Get root pattern for app-route, for more info about `rootPath` see:
-        // https://www.polymer-project.org/2.0/docs/upgrade#urls-in-templates
         this.rootPattern = (new URL(this.rootPath)).pathname;
       }
 
       _routePageChanged(page) {
-        // Polymer 2.0 will call with `undefined` on initialization.
-        // Ignore until we are properly called with a string.
-        if (page === undefined) {
-          return;
-        }
+        if (page === undefined) return;
 
-        // If no page was found in the route data, page will be an empty string.
-        // Deault to 'view1' in that case.
         this.page = page || 'view1';
 
-        // Close a non-persistent drawer when the page & route are changed.
-        if (!this.$.drawer.persistent) {
-          this.$.drawer.close();
-        }
+        if (!this.$.drawer.persistent) this.$.drawer.close();
       }
 
       _pageChanged(page) {
