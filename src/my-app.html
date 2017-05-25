@@ -13,6 +13,7 @@
 
 
 <link rel="import" href="my-icons.html">
+<link rel="import" href="shared-styles.html">
 <link rel="lazy-import" href="my-view1.html">
 <link rel="lazy-import" href="my-view2.html">
 <link rel="lazy-import" href="my-view3.html">
@@ -22,9 +23,9 @@
   <template>
     <style>
       :host {
+        display: block;
         --app-primary-color: #0ff;
         --app-secondary-color: #ff0;
-        display: block;
       }
       app-drawer-layout:not([narrow]) [drawer-toggle] {
         display: none;
