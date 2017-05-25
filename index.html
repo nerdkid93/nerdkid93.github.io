@@ -12,33 +12,28 @@
     <!--  If deploying to a non-root path, replace href="/" with the full path to the project root.  -->
     <base href="/">
 
-    <link rel="icon" href="images/favicon.ico">
 
-    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/manifest/apple-touch-icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=1">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/images/favicon.svg?v=1">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/images/manifest/safari-pinned-tab.svg?v=1" color="#359c9c">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-TileImage" content="/images/manifest/mstile-144x144.png">
     <meta name="theme-color" content="#00ffff">
 
-    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+    <!--  fallback for manifest.json/browserconfig.xml  -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Chris Beam">
-
-    <!-- Add to homescreen for Safari on iOS + icons -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="application-name" content="Chris Beam">
     <meta name="apple-mobile-web-app-title" content="Chris Beam">
-    <link rel="apple-touch-icon" href="images/manifest/icon-48x48.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png">
-
-    <!-- Tile icon for Windows 8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
-    <meta name="msapplication-TileColor" content="#3f51b5">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="msapplication-tap-highlight" content="no">
 
     <script> const baseUrl = document.querySelector('base').href; if ('serviceWorker' in navigator) window.addEventListener('load', _ => navigator.serviceWorker.register(baseUrl + 'service-worker.js')); </script>
-    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
-    <link rel="import" href="src/my-app.html">
+    <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <link rel="import" href="/src/my-app.html">
 
     <style>
       body {
@@ -52,6 +47,6 @@
   </head>
   <body>
     <my-app></my-app>
-    <noscript>Please enable JavaScript to view this website.</noscript>
+    <noscript>Hi! This is my personal GitHub webpage. You can use this to contact me or follow my work and experiemnts! In order to view everything correctly, please make sure that you have enabled JavaScript.</noscript>
   </body>
 </html>
