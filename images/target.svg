@@ -1,0 +1,5 @@
+<svg version="1.1" id="favicon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <style> circle { fill: #000; } .color { stroke: #0ff;  } </style>
+  <circle r="49.5%" cx="50%" cy="50%"/>
+  <circle class="color" r="24.75%" stroke-width="16.5%" cx="50%" cy="50%"/>
+</svg>
