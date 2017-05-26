@@ -14,10 +14,10 @@
 
 <link rel="import" href="my-icons.html">
 <link rel="import" href="shared-styles.html">
-<link rel="lazy-import" href="my-view1.html">
-<link rel="lazy-import" href="my-view2.html">
-<link rel="lazy-import" href="my-view3.html">
-<link rel="lazy-import" href="my-view404.html">
+<link rel="import" href="about-me.html" async>
+<link rel="import" href="my-view2.html" async>
+<link rel="import" href="my-view3.html" async>
+<link rel="import" href="not-found.html" async>
 
 <dom-module id="my-app">
   <template>
@@ -65,7 +65,7 @@
       <app-drawer id="drawer" slot="drawer">
         <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="about" href="#/about">About</a>
+          <a name="about" href="#/about">About Me</a>
           <a name="view2" href="#/view2">View Two</a>
           <a name="view3" href="#/view3">View Three</a>
         </iron-selector>
@@ -86,7 +86,7 @@
             attr-for-selected="name"
             fallback-selection="404"
             role="main">
-          <my-view1 name="view1"></my-view1>
+          <about-me name="about"></about-me>
           <my-view2 name="view2"></my-view2>
           <my-view3 name="view3"></my-view3>
           <not-found name="404"></not-found>
@@ -105,8 +105,7 @@
           page: {
             type: String,
             reflectToAttribute: true,
-            observer: '_pageChanged',
-            value: 'view1',
+            value: 'about',
           },
           rootPattern: String,
           routeData: Object,
@@ -123,22 +122,8 @@
 
       _routePageChanged(page) {
         if (page === undefined) return;
-        this.page = page || 'view1';
+        this.page = page || 'about';
         if (!this.$.drawer.persistent) this.$.drawer.close();
-      }
-
-      _pageChanged(page) {
-        // Load page import on demand. Show 404 page if fails
-        var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
-        Polymer.importHref(
-            resolvedPageUrl,
-            null,
-            this._showPage404.bind(this),
-            true);
-      }
-
-      _showPage404() {
-        this.page = '404';
       }
     }
 
