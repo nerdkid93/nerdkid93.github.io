@@ -1,0 +1,23 @@
+<head>
+  <meta charset="utf-8">
+  <title>
+    {% if page.title %} {{ page.title }} &ndash; {% endif %}
+    {{ site.name }}
+  </title>
+
+  <meta name="author" content="{{ site.author }}" />
+  <meta name="description" content="{{ site.description }}" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+
+  <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/mobile.css" type="text/css" media="screen, projection" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+  <link rel="icon" type="image/png"  href="/images/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- polyfills and  -->
+  <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="https://use.fontawesome.com/4e2622fdee.js" defer></script>
+</head>

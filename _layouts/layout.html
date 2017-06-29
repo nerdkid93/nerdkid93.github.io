@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+{% include head.html %}
+
+<body>
+  <div class="top-line"></div>
+  <div class="container">
+    
+    {% include sidebar.html %}
+
+    {{ content }}
+
+    <section class="content">
+      <div class="footer">
+        <section class="thanks">
+          <span>content made by a 🤓 with ❤︎ and 💦</span>
+        </section>
+      </div>
+    </section>
+  </div>
+</body>
+<!--<script>
+(function() {
+  'use strict';
+  if ('xserviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js', {scope: '/'}).then(_ => {
+      console.log('service worker is all cool 🐳', location.origin);
+    }).catch(e => {
+      console.error('service worker is not so cool 🔥', e);
+      throw e;
+    });
+
+    // if (navigator.serviceWorker.controller) {
+    //   // Correctly prompt the user to reload during SW phase change.
+    //   navigator.serviceWorker.controller.onstatechange = e => {
+    //     if (e.target.state === 'redundant') {
+    //       document.querySelector('#reload-prompt').style.visibility = 'visible';
+    //     }
+    //   }
+    // }
+  }
+
+  var rainmaker = document.getElementById('rainmaker');
+  document.getElementById('rainButton').addEventListener('click', rain);
+
+  function rain(event) {
+    if (rainmaker.active) {
+      rainmaker.stop();
+      event.target.innerHTML = "✨";
+    } else {
+      rainmaker.start();
+      event.target.innerHTML = "☔︎";
+    }
+  }
+})();
+</script>-->
+</html>

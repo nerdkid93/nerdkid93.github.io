@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>
+     Projects &ndash; 
+    Christopher Beam
+  </title>
+
+  <meta name="author" content="Christopher M. Beam" />
+  <meta name="description" content="A very bloggy blog..." />
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+
+  <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/mobile.css" type="text/css" media="screen, projection" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+  <link rel="icon" type="image/png"  href="/images/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- polyfills and  -->
+  <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="https://use.fontawesome.com/4e2622fdee.js" defer></script>
+</head>
+
+<body>
+  <div class="top-line"></div>
+  <div class="container">
+    
+    <header class="sidebar">
+  <a href="/" title="Charizard" aria-label="Charizard">
+    <img src="https://www.gravatar.com/avatar/61a1341b9c84b0612c714cca0579f8bc?s=150&d=retro" height="150" width="150" class="avatar" />
+  </a>
+
+  <div class="sidebar-text">
+    <section class="meta">
+      <!-- github link -->
+      <a href="https://github.com/nerdkid93" target="_blank" title="Check out my sauce code" aria-label="Check out my source code"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+      <!-- facebook link -->
+      <a href="https://facebook.com/chrisbeam93" target="_blank" title="Friend me on Facebook" aria-label="Friend me on Facebook"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+      <!-- linkedin link -->
+      <a href="https://linkedin.com/in/christopherbeam/" target="_blank" title="Connect with me on LinkedIn" aria-label="Connect with me on LinkedIn"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+      <!-- steam link -->
+      <a href="https://steamcommunity.com/id/nerdkid93" target="_blank" title="Game with me on Steam" aria-label="Game with me on Steam"><i class="fa fa-steam fa-lg" aria-hidden="true"></i></a>
+      <!-- reddit link -->
+      <a href="https://reddit.com/u/nerdkid93" target="_blank" title=""><i class="fa fa-reddit-alien fa-lg" aria-hidden="true"></i></a>
+    </section>
+
+    <nav class="sections">
+      <ul>
+        <li><a href="/about">about me</a></li>
+        <li><a href="/">posts</a></li>
+        <li><a href="/projects">projects</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <section class="content">
+  <h1>Projects and Tutorials!</h1>
+  <br><br>
+  <p>Most of this stuff is up on <a href="https://github.com/nerdkid93">GitHub</a>.</p>
+
+  <p>
+    <ul class="listing projects">
+      <h3>2017</h3>
+      <li><a href="https://wasm.nerdkid93.xyz">wasm codelab</a>: learning early use cases for web assembly</li>
+
+      <h3>2016</h3>
+      <li><a href="http://hospitalrun.io/">hospitalrun</a>: I worked on i18n and incident reporting features for Cure's hospital management software suite</li>
+      <li><a href="https://github.com/nerdkid93/super-rentals/">super-rentals</a>: intro to <a>Ember.JS</a> (my fist experience with a JavaScript framework)</li>
+    </ul>
+  </p>
+</section>
+
+
+    <section class="content">
+      <div class="footer">
+        <section class="thanks">
+          <span>content made by a 🤓 with ❤︎ and 💦</span>
+        </section>
+      </div>
+    </section>
+  </div>
+</body>
+<!--<script>
+(function() {
+  'use strict';
+  if ('xserviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js', {scope: '/'}).then(_ => {
+      console.log('service worker is all cool 🐳', location.origin);
+    }).catch(e => {
+      console.error('service worker is not so cool 🔥', e);
+      throw e;
+    });
+
+    // if (navigator.serviceWorker.controller) {
+    //   // Correctly prompt the user to reload during SW phase change.
+    //   navigator.serviceWorker.controller.onstatechange = e => {
+    //     if (e.target.state === 'redundant') {
+    //       document.querySelector('#reload-prompt').style.visibility = 'visible';
+    //     }
+    //   }
+    // }
+  }
+
+  var rainmaker = document.getElementById('rainmaker');
+  document.getElementById('rainButton').addEventListener('click', rain);
+
+  function rain(event) {
+    if (rainmaker.active) {
+      rainmaker.stop();
+      event.target.innerHTML = "✨";
+    } else {
+      rainmaker.start();
+      event.target.innerHTML = "☔︎";
+    }
+  }
+})();
+</script>-->
+</html>
